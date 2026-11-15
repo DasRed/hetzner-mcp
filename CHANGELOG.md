@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dasred/hetzner-mcp/compare/v1.0.2...v1.0.3) (2026-11-15)
+
+
+### Bug Fixes
+
+* fixing docker ([81df4a8](https://github.com/dasred/hetzner-mcp/commit/81df4a8f9c60e5e580f8939cfa40e6fc3fa8f40f))
+
 ## [1.0.2](https://github.com/dasred/hetzner-mcp/compare/v1.0.1...v1.0.2) (2026-11-15)
 
 
