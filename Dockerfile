@@ -8,7 +8,7 @@ WORKDIR /var/www
 
 COPY ./package.json /var/www/package.json
 COPY ./package-lock.json /var/www/package-lock.json
-COPY ./dist var/www/dist
+COPY ./dist /var/www/dist
 
 RUN npm ci --omit=dev
 
