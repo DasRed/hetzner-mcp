@@ -19,3 +19,4 @@ jobs:
       dockhand-token: ${{ secrets.DOCKHAND_TOKEN }}
     with:
       dockhand-environment: chronos
+      container-name: mcp-hetzner
