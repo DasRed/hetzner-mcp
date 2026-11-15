@@ -1,6 +1,6 @@
-import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadConfig, parseBoolean, parseSplits, SPLIT_NAMES } from '../src/config.ts';
+import {describe, it} from 'node:test';
+import {loadConfig, parseBoolean, parseSplits, SPLIT_NAMES} from '../src/config.ts';
 
 describe('config', () => {
     it('requires a Hetzner token', () => {
@@ -8,7 +8,7 @@ describe('config', () => {
     });
 
     it('uses safe defaults', () => {
-        const config = loadConfig({ HETZNER_API_TOKEN: 'x' });
+        const config = loadConfig({HETZNER_API_TOKEN: 'x'});
         assert.equal(config.host, '0.0.0.0');
         assert.equal(config.port, 3000);
         assert.equal(config.path, '/mcp');
@@ -44,7 +44,7 @@ describe('config', () => {
     it('rejects invalid values', () => {
         assert.throws(() => parseSplits('servers,unknown'), /unknown/);
         assert.throws(() => parseBoolean('maybe', true), /Invalid boolean/);
-        assert.throws(() => loadConfig({ HETZNER_API_TOKEN: 'x', PORT: '70000' }), /Invalid PORT/);
+        assert.throws(() => loadConfig({HETZNER_API_TOKEN: 'x', PORT: '70000'}), /Invalid PORT/);
     });
 
     it('treats "all" as every split', () => {

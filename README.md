@@ -16,18 +16,18 @@ The server is stateless: every `POST` to the MCP endpoint is handled by a fresh 
 
 All settings are environment variables (see [`.env.example`](.env.example)).
 
-| Variable                    | Default   | Description                                                                                                                         |
-|-----------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Variable                    | Default   | Description                                                                                                                               |
+|-----------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | `HETZNER_API_TOKEN`         | –         | Hetzner Cloud API token of one project (Hetzner Console → project → Security → API tokens). A **Read** token is enough in read-only mode. |
-| `HETZNER_STORAGE_API_TOKEN` | –         | Optional token for Storage Boxes, falls back to `HETZNER_API_TOKEN`.                                                               |
-| `HOST`                      | `0.0.0.0` | Listen address.                                                                                                                     |
-| `PORT`                      | `3000`    | Listen port.                                                                                                                        |
-| `MCP_PATH`                  | `/mcp`    | Path of the MCP endpoint.                                                                                                           |
-| `MCP_SPLITS`                | `all`     | `all` or a comma separated list of `servers`, `networking`, `load-balancers`, `ips`, `storage`, `storage-boxes`, `config`, `dns`.  |
-| `MCP_READ_ONLY`             | `true`    | Expose only read-only tools.                                                                                                        |
-| `MCP_TOOLS_ALLOW`           | –         | Comma separated tool names to keep, `*` as wildcard (e.g. `hetzner_list_*,hetzner_get_pricing`).                                   |
-| `MCP_TOOLS_DENY`            | –         | Comma separated tool names to remove, `*` as wildcard.                                                                             |
-| `MCP_AUTH_TOKEN`            | –         | If set, the MCP endpoint requires `Authorization: Bearer <token>`.                                                                  |
+| `HETZNER_STORAGE_API_TOKEN` | –         | Optional token for Storage Boxes, falls back to `HETZNER_API_TOKEN`.                                                                      |
+| `HOST`                      | `0.0.0.0` | Listen address.                                                                                                                           |
+| `PORT`                      | `3000`    | Listen port.                                                                                                                              |
+| `MCP_PATH`                  | `/mcp`    | Path of the MCP endpoint.                                                                                                                 |
+| `MCP_SPLITS`                | `all`     | `all` or a comma separated list of `servers`, `networking`, `load-balancers`, `ips`, `storage`, `storage-boxes`, `config`, `dns`.         |
+| `MCP_READ_ONLY`             | `true`    | Expose only read-only tools.                                                                                                              |
+| `MCP_TOOLS_ALLOW`           | –         | Comma separated tool names to keep, `*` as wildcard (e.g. `hetzner_list_*,hetzner_get_pricing`).                                          |
+| `MCP_TOOLS_DENY`            | –         | Comma separated tool names to remove, `*` as wildcard.                                                                                    |
+| `MCP_AUTH_TOKEN`            | –         | If set, the MCP endpoint requires `Authorization: Bearer <token>`.                                                                        |
 
 Filters are applied in this order: read-only mode, allow list, deny list.
 

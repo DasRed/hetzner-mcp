@@ -1,54 +1,54 @@
 {
-    "name": "@dasred/hetzner-mcp",
-    "version": "1.0.0",
-    "description": "Streamable HTTP MCP server for the Hetzner Cloud API, based on @lazyants/hetzner-mcp-server, packaged as a Docker image",
-    "type": "module",
-    "author": "Marco Starker",
-    "license": "MIT",
-    "private": true,
-    "bugs": {
+    "name":            "@dasred/hetzner-mcp",
+    "version":         "1.0.0",
+    "description":     "Streamable HTTP MCP server for the Hetzner Cloud API, based on @lazyants/hetzner-mcp-server, packaged as a Docker image",
+    "type":            "module",
+    "author":          "Marco Starker",
+    "license":         "MIT",
+    "private":         true,
+    "bugs":            {
         "url": "https://github.com/dasred/hetzner-mcp/issues"
     },
-    "homepage": "https://github.com/dasred/hetzner-mcp",
-    "engines": {
+    "homepage":        "https://github.com/dasred/hetzner-mcp",
+    "engines":         {
         "node": ">=26.12.1",
-        "npm": ">=11.20.0"
+        "npm":  ">=11.20.0"
     },
-    "repository": {
+    "repository":      {
         "type": "git",
-        "url": "git+https://github.com/dasred/hetzner-mcp.git"
+        "url":  "git+https://github.com/dasred/hetzner-mcp.git"
     },
-    "bin": {
+    "bin":             {
         "hetzner-mcp": "dist/index.js"
     },
-    "files": [
+    "files":           [
         "dist"
     ],
-    "scripts": {
-        "build": "tsc -p tsconfig.json",
-        "start": "node dist/index.js",
-        "dev": "node --env-file-if-exists=.env --watch src/index.ts",
-        "typecheck": "tsc -p tsconfig.test.json",
-        "test": "npm run typecheck && node --test \"test/**/*.test.ts\"",
-        "publish:check": "semantic-release --branch main --no-ci --dry-run",
+    "scripts":         {
+        "build":            "tsc -p tsconfig.json",
+        "start":            "node dist/index.js",
+        "dev":              "node --env-file-if-exists=.env --watch src/index.ts",
+        "typecheck":        "tsc -p tsconfig.test.json",
+        "test":             "npm run typecheck && node --test \"test/**/*.test.ts\"",
+        "publish:check":    "semantic-release --branch main --no-ci --dry-run",
         "semantic-release": "semantic-release"
     },
-    "dependencies": {
+    "dependencies":    {
         "@lazyants/hetzner-mcp-server": "^4.1.0",
-        "@modelcontextprotocol/sdk": "^1.32.2"
+        "@modelcontextprotocol/sdk":    "^1.32.2"
     },
     "devDependencies": {
-        "@semantic-release/changelog": "^7.0.0",
-        "@semantic-release/commit-analyzer": "^13.0.1",
-        "@semantic-release/git": "^11.0.1",
-        "@semantic-release/github": "^12.0.11",
-        "@semantic-release/npm": "^13.2.0",
+        "@semantic-release/changelog":               "^7.0.0",
+        "@semantic-release/commit-analyzer":         "^13.0.1",
+        "@semantic-release/git":                     "^11.0.1",
+        "@semantic-release/github":                  "^12.0.11",
+        "@semantic-release/npm":                     "^13.2.0",
         "@semantic-release/release-notes-generator": "^14.1.1",
-        "@types/node": "^26.6.6",
-        "semantic-release": "^25.0.9",
-        "typescript": "^7.0.2"
+        "@types/node":                               "^26.6.6",
+        "semantic-release":                          "^25.0.9",
+        "typescript":                                "^7.0.2"
     },
-    "release": {
+    "release":         {
         "plugins": [
             "@semantic-release/commit-analyzer",
             "@semantic-release/release-notes-generator",
@@ -67,7 +67,7 @@
             [
                 "@semantic-release/git",
                 {
-                    "assets": [
+                    "assets":  [
                         "package.json",
                         "package-lock.json",
                         "CHANGELOG.md"
