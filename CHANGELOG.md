@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/dasred/hetzner-mcp/compare/v1.0.4...v1.0.5) (2026-11-15)
+
+
+### Bug Fixes
+
+* small fixes ([7019fb1](https://github.com/dasred/hetzner-mcp/commit/7019fb18ce5741ed0c2a0425fc3c8556763b6f7f))
+
 ## [1.0.4](https://github.com/dasred/hetzner-mcp/compare/v1.0.3...v1.0.4) (2026-11-15)
 
 
