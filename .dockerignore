@@ -1,0 +1,16 @@
+/.git
+/.github
+/.idea
+/.vscode
+/node_modules
+/dist
+/coverage
+/test
+/.env
+/.env.*
+/README.md
+/CHANGELOG.md
+/.gitignore
+/.dockerignore
+/tsconfig.test.json
+*.DS_Store
