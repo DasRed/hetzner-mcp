@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/dasred/hetzner-mcp/compare/v1.0.5...v1.0.6) (2026-11-20)
+
+
+### Bug Fixes
+
+* update github workflows ([c7a6fbd](https://github.com/dasred/hetzner-mcp/commit/c7a6fbdd1220b987147f9c2e5670a83ac18268d5))
+
 ## [1.0.5](https://github.com/dasred/hetzner-mcp/compare/v1.0.4...v1.0.5) (2026-11-15)
 
 

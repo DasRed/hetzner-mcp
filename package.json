@@ -1,6 +1,6 @@
 {
     "name": "@dasred/hetzner-mcp",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Streamable HTTP MCP server for the Hetzner Cloud API, based on @lazyants/hetzner-mcp-server, packaged as a Docker image",
     "type": "module",
     "author": "Marco Starker",
