@@ -10,18 +10,18 @@ section: Setup
 
 hetzner-mcp is configured entirely through environment variables. A template is in [`.env.example`](https://github.com/DasRed/hetzner-mcp/blob/main/.env.example).
 
-| Name                        | Default   | Description                                                                                                                   |
-|-----------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------|
-| `HETZNER_API_TOKEN`         | –         | API token of a Hetzner Cloud project. Required unless only `HETZNER_STORAGE_API_TOKEN` is set.                                |
-| `HETZNER_STORAGE_API_TOKEN` | –         | Separate token for Storage Boxes. Falls back to `HETZNER_API_TOKEN`.                                                          |
-| `HOST`                      | `0.0.0.0` | Listen address.                                                                                                               |
-| `PORT`                      | `3000`    | Listen port.                                                                                                                  |
-| `MCP_PATH`                  | `/mcp`    | Path of the MCP endpoint.                                                                                                     |
+| Name                        | Default   | Description                                                                                                                       |
+|-----------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------|
+| `HETZNER_API_TOKEN`         | –         | API token of a Hetzner Cloud project. Required unless only `HETZNER_STORAGE_API_TOKEN` is set.                                    |
+| `HETZNER_STORAGE_API_TOKEN` | –         | Separate token for Storage Boxes. Falls back to `HETZNER_API_TOKEN`.                                                              |
+| `HOST`                      | `0.0.0.0` | Listen address.                                                                                                                   |
+| `PORT`                      | `3000`    | Listen port.                                                                                                                      |
+| `MCP_PATH`                  | `/mcp`    | Path of the MCP endpoint.                                                                                                         |
 | `MCP_SPLITS`                | `all`     | `all` or a comma separated list of `servers`, `networking`, `load-balancers`, `ips`, `storage`, `storage-boxes`, `config`, `dns`. |
-| `MCP_READ_ONLY`             | `true`    | Expose only tools with `readOnlyHint: true`. Accepts `true`/`false`, `1`/`0`, `yes`/`no`, `on`/`off`.                        |
-| `MCP_TOOLS_ALLOW`           | –         | Comma separated tool names to keep. `*` is a wildcard.                                                                        |
-| `MCP_TOOLS_DENY`            | –         | Comma separated tool names to remove. `*` is a wildcard.                                                                      |
-| `MCP_AUTH_TOKEN`            | –         | If set, `/mcp` requires the header `Authorization: Bearer <token>`.                                                           |
+| `MCP_READ_ONLY`             | `true`    | Expose only tools with `readOnlyHint: true`. Accepts `true`/`false`, `1`/`0`, `yes`/`no`, `on`/`off`.                             |
+| `MCP_TOOLS_ALLOW`           | –         | Comma separated tool names to keep. `*` is a wildcard.                                                                            |
+| `MCP_TOOLS_DENY`            | –         | Comma separated tool names to remove. `*` is a wildcard.                                                                          |
+| `MCP_AUTH_TOKEN`            | –         | If set, `/mcp` requires the header `Authorization: Bearer <token>`.                                                               |
 
 Invalid values (unknown group, bad port, broken boolean) stop the server at startup with a clear error.
 

@@ -10,18 +10,18 @@ section: Einrichtung
 
 hetzner-mcp wird komplett über Umgebungsvariablen konfiguriert. Eine Vorlage findest du in [`.env.example`](https://github.com/DasRed/hetzner-mcp/blob/main/.env.example).
 
-| Name                        | Standard  | Beschreibung                                                                                                                  |
-|-----------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------|
-| `HETZNER_API_TOKEN`         | –         | API-Token eines Hetzner-Cloud-Projekts. Pflicht, außer du setzt nur `HETZNER_STORAGE_API_TOKEN`.                              |
-| `HETZNER_STORAGE_API_TOKEN` | –         | Eigener Token für Storage Boxes. Fällt auf `HETZNER_API_TOKEN` zurück.                                                        |
-| `HOST`                      | `0.0.0.0` | Adresse, auf der der Server lauscht.                                                                                          |
-| `PORT`                      | `3000`    | Port des Servers.                                                                                                             |
-| `MCP_PATH`                  | `/mcp`    | Pfad des MCP-Endpunkts.                                                                                                       |
+| Name                        | Standard  | Beschreibung                                                                                                                            |
+|-----------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `HETZNER_API_TOKEN`         | –         | API-Token eines Hetzner-Cloud-Projekts. Pflicht, außer du setzt nur `HETZNER_STORAGE_API_TOKEN`.                                        |
+| `HETZNER_STORAGE_API_TOKEN` | –         | Eigener Token für Storage Boxes. Fällt auf `HETZNER_API_TOKEN` zurück.                                                                  |
+| `HOST`                      | `0.0.0.0` | Adresse, auf der der Server lauscht.                                                                                                    |
+| `PORT`                      | `3000`    | Port des Servers.                                                                                                                       |
+| `MCP_PATH`                  | `/mcp`    | Pfad des MCP-Endpunkts.                                                                                                                 |
 | `MCP_SPLITS`                | `all`     | `all` oder eine kommagetrennte Liste aus `servers`, `networking`, `load-balancers`, `ips`, `storage`, `storage-boxes`, `config`, `dns`. |
-| `MCP_READ_ONLY`             | `true`    | Nur Tools mit `readOnlyHint: true` anbieten. Akzeptiert `true`/`false`, `1`/`0`, `yes`/`no`, `on`/`off`.                     |
-| `MCP_TOOLS_ALLOW`           | –         | Kommagetrennte Tool-Namen, die übrig bleiben sollen. `*` ist Platzhalter.                                                     |
-| `MCP_TOOLS_DENY`            | –         | Kommagetrennte Tool-Namen, die entfernt werden. `*` ist Platzhalter.                                                          |
-| `MCP_AUTH_TOKEN`            | –         | Wenn gesetzt, verlangt `/mcp` den Header `Authorization: Bearer <token>`.                                                     |
+| `MCP_READ_ONLY`             | `true`    | Nur Tools mit `readOnlyHint: true` anbieten. Akzeptiert `true`/`false`, `1`/`0`, `yes`/`no`, `on`/`off`.                                |
+| `MCP_TOOLS_ALLOW`           | –         | Kommagetrennte Tool-Namen, die übrig bleiben sollen. `*` ist Platzhalter.                                                               |
+| `MCP_TOOLS_DENY`            | –         | Kommagetrennte Tool-Namen, die entfernt werden. `*` ist Platzhalter.                                                                    |
+| `MCP_AUTH_TOKEN`            | –         | Wenn gesetzt, verlangt `/mcp` den Header `Authorization: Bearer <token>`.                                                               |
 
 Ungültige Werte (unbekannte Gruppe, falscher Port, kaputter Boolean) brechen den Start mit einer klaren Fehlermeldung ab.
 

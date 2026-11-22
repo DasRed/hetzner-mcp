@@ -1,9 +1,9 @@
 ---
-title: Installation
+title:       Installation
 description: hetzner-mcp als Docker-Container starten – per docker run oder Docker Compose.
-order: 10
-slug: installation
-section: Einrichtung
+order:       10
+slug:        installation
+section:     Einrichtung
 ---
 
 ## Image
@@ -40,8 +40,8 @@ Antwort: `{"status":"ok"}`.
 ```yaml
 services:
   hetzner-mcp:
-    image: ghcr.io/dasred/hetzner-mcp:1
-    restart: unless-stopped
+    image:     ghcr.io/dasred/hetzner-mcp:1
+    restart:   unless-stopped
     read_only: true
     cap_drop:
       - ALL
@@ -49,8 +49,8 @@ services:
       - no-new-privileges:true
     environment:
       HETZNER_API_TOKEN: ${HETZNER_API_TOKEN}
-      MCP_SPLITS: all
-      MCP_READ_ONLY: 'true'
+      MCP_SPLITS:        all
+      MCP_READ_ONLY:     'true'
     ports:
       - '127.0.0.1:3000:3000'
 ```
@@ -62,10 +62,10 @@ Den Token legst du in eine `.env` neben der `compose.yaml`, nicht direkt in die 
 
 ## Ports und Endpunkte
 
-| Pfad       | Methode | Beschreibung                                     |
-|------------|---------|--------------------------------------------------|
-| `/mcp`     | `POST`  | MCP-Endpunkt (Pfad über `MCP_PATH` änderbar)     |
-| `/healthz` | `GET`   | Health-Check, ohne Authentifizierung             |
+| Pfad       | Methode | Beschreibung                                 |
+|------------|---------|----------------------------------------------|
+| `/mcp`     | `POST`  | MCP-Endpunkt (Pfad über `MCP_PATH` änderbar) |
+| `/healthz` | `GET`   | Health-Check, ohne Authentifizierung         |
 
 Der Container lauscht auf Port `3000`. Andere Methoden als `POST` auf `/mcp` beantwortet der Server mit `405`, weil er stateless läuft.
 

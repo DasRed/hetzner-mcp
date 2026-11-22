@@ -62,10 +62,10 @@ Put the token into a `.env` file next to `compose.yaml`, not into the file itsel
 
 ## Ports and endpoints
 
-| Path       | Method | Description                                |
-|------------|--------|--------------------------------------------|
+| Path       | Method | Description                                     |
+|------------|--------|-------------------------------------------------|
 | `/mcp`     | `POST` | MCP endpoint (path configurable via `MCP_PATH`) |
-| `/healthz` | `GET`  | Health check, no authentication            |
+| `/healthz` | `GET`  | Health check, no authentication                 |
 
 The container listens on port `3000`. Methods other than `POST` on `/mcp` return `405` because the server is stateless.
 

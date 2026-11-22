@@ -46,12 +46,12 @@ Claude sollte dafür `hetzner_list_servers`, `hetzner_get_pricing` bzw. `hetzner
 
 ## Fehlersuche
 
-| Symptom                         | Ursache                                                                       |
-|---------------------------------|-------------------------------------------------------------------------------|
-| Connector lässt sich nicht verbinden | Server nicht öffentlich erreichbar oder Reverse Proxy blockt die IPs von Anthropic. |
-| `401 Unauthorized`              | `MCP_AUTH_TOKEN` ist gesetzt, der Client schickt aber keinen oder einen falschen Token. |
-| `405 Method not allowed`        | Normal bei `GET`. Der Server ist stateless und nimmt nur `POST` an.           |
-| Tools fehlen                    | `MCP_READ_ONLY`, `MCP_SPLITS` oder die Allow/Deny-Listen filtern sie raus.    |
-| Hetzner-Fehler `unauthorized`   | `HETZNER_API_TOKEN` falsch, abgelaufen oder für ein anderes Projekt.          |
+| Symptom                              | Ursache                                                                                 |
+|--------------------------------------|-----------------------------------------------------------------------------------------|
+| Connector lässt sich nicht verbinden | Server nicht öffentlich erreichbar oder Reverse Proxy blockt die IPs von Anthropic.     |
+| `401 Unauthorized`                   | `MCP_AUTH_TOKEN` ist gesetzt, der Client schickt aber keinen oder einen falschen Token. |
+| `405 Method not allowed`             | Normal bei `GET`. Der Server ist stateless und nimmt nur `POST` an.                     |
+| Tools fehlen                         | `MCP_READ_ONLY`, `MCP_SPLITS` oder die Allow/Deny-Listen filtern sie raus.              |
+| Hetzner-Fehler `unauthorized`        | `HETZNER_API_TOKEN` falsch, abgelaufen oder für ein anderes Projekt.                    |
 
 Nach Änderungen an den Tools musst du den Connector in Claude einmal trennen und neu verbinden, damit Claude die neue Tool-Liste lädt.

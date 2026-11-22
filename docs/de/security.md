@@ -1,9 +1,9 @@
 ---
-title: Sicherheit
+title:       Sicherheit
 description: Welche Rechte hetzner-mcp braucht, was der Server darf und wie du den Endpunkt absicherst.
-order: 50
-slug: sicherheit
-section: Referenz
+order:       50
+slug:        sicherheit
+section:     Referenz
 ---
 
 ## Standard: nur lesen
@@ -33,11 +33,11 @@ Mit `MCP_READ_ONLY=false` und einem Token mit **Lesen & Schreiben** kann Claude 
 
 Wer `/mcp` erreicht, kann alle aktiven Tools mit deinem Token aufrufen. Lass den Endpunkt deshalb nie offen im Netz stehen.
 
-| Variante                        | Geeignet für                  | Umsetzung                                                    |
-|---------------------------------|-------------------------------|--------------------------------------------------------------|
+| Variante                        | Geeignet für                  | Umsetzung                                                                                                |
+|---------------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------|
 | IP-Allowlist am Reverse Proxy   | Claude (Web, Desktop, Mobile) | Nur die [IPs von Anthropic](https://docs.claude.com/en/api/ip-addresses) und dein eigenes Netz zulassen. |
-| Bearer-Token (`MCP_AUTH_TOKEN`) | Claude Code, eigene Clients   | Langen Zufallswert setzen, z. B. `openssl rand -hex 32`.     |
-| Nur intern                      | Clients im selben Netz        | Port nur an `127.0.0.1` oder ein internes Netz binden.        |
+| Bearer-Token (`MCP_AUTH_TOKEN`) | Claude Code, eigene Clients   | Langen Zufallswert setzen, z. B. `openssl rand -hex 32`.                                                 |
+| Nur intern                      | Clients im selben Netz        | Port nur an `127.0.0.1` oder ein internes Netz binden.                                                   |
 
 Der Token-Vergleich läuft zeitkonstant. `/healthz` ist absichtlich ohne Authentifizierung erreichbar und gibt nur `{"status":"ok"}` zurück.
 

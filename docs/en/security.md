@@ -33,11 +33,11 @@ With `MCP_READ_ONLY=false` and a **Read & Write** token, Claude can among other 
 
 Anyone who can reach `/mcp` can call all active tools with your token. Never leave the endpoint open on the internet.
 
-| Option                          | Suitable for                  | How                                                          |
-|---------------------------------|-------------------------------|--------------------------------------------------------------|
+| Option                          | Suitable for                  | How                                                                                             |
+|---------------------------------|-------------------------------|-------------------------------------------------------------------------------------------------|
 | IP allowlist at reverse proxy   | Claude (web, desktop, mobile) | Allow only [Anthropic's IPs](https://docs.claude.com/en/api/ip-addresses) and your own network. |
-| Bearer token (`MCP_AUTH_TOKEN`) | Claude Code, own clients      | Set a long random value, e.g. `openssl rand -hex 32`.        |
-| Internal only                   | Clients in the same network   | Bind the port to `127.0.0.1` or an internal network.         |
+| Bearer token (`MCP_AUTH_TOKEN`) | Claude Code, own clients      | Set a long random value, e.g. `openssl rand -hex 32`.                                           |
+| Internal only                   | Clients in the same network   | Bind the port to `127.0.0.1` or an internal network.                                            |
 
 The token comparison is constant-time. `/healthz` is intentionally unauthenticated and only returns `{"status":"ok"}`.
 
