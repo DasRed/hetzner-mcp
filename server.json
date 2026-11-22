@@ -1,0 +1,84 @@
+{
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "io.github.DasRed/hetzner-mcp",
+    "title": "Hetzner Cloud",
+    "description": "Query Hetzner Cloud servers, networks, IPs, volumes, DNS and prices. Read-only by default.",
+    "version": "1.0.6",
+    "websiteUrl": "https://www.marco-starker.de/en/projects/hetzner-mcp/docs",
+    "repository": {
+        "id": "1458536340",
+        "source": "github",
+        "url": "https://github.com/DasRed/hetzner-mcp"
+    },
+    "packages": [
+        {
+            "registryType": "oci",
+            "identifier": "ghcr.io/dasred/hetzner-mcp:1.0.6",
+            "runtimeHint": "docker",
+            "runtimeArguments": [
+                {
+                    "type": "named",
+                    "name": "-p",
+                    "description": "Port mapping host:container. The URL below assumes host port 3000.",
+                    "default": "3000:3000",
+                    "isRequired": true
+                }
+            ],
+            "transport": {
+                "type": "streamable-http",
+                "url": "http://localhost:3000/mcp",
+                "headers": [
+                    {
+                        "name": "Authorization",
+                        "description": "\"Bearer <token>\", only needed when MCP_AUTH_TOKEN is set",
+                        "isRequired": false,
+                        "isSecret": true
+                    }
+                ]
+            },
+            "environmentVariables": [
+                {
+                    "name": "HETZNER_API_TOKEN",
+                    "description": "Hetzner Cloud API token of one project, a Read token is enough in read-only mode",
+                    "isRequired": true,
+                    "isSecret": true
+                },
+                {
+                    "name": "HETZNER_STORAGE_API_TOKEN",
+                    "description": "Separate token for Storage Boxes, falls back to HETZNER_API_TOKEN",
+                    "isSecret": true
+                },
+                {
+                    "name": "MCP_SPLITS",
+                    "description": "all or a comma separated list of servers, networking, load-balancers, ips, storage, storage-boxes, config, dns",
+                    "default": "all"
+                },
+                {
+                    "name": "MCP_READ_ONLY",
+                    "description": "Only expose the read-only tools",
+                    "format": "boolean",
+                    "default": "true",
+                    "choices": [
+                        "true",
+                        "false"
+                    ]
+                },
+                {
+                    "name": "MCP_TOOLS_ALLOW",
+                    "description": "Comma separated tool names to keep, * as wildcard",
+                    "placeholder": "hetzner_list_*,hetzner_get_pricing"
+                },
+                {
+                    "name": "MCP_TOOLS_DENY",
+                    "description": "Comma separated tool names to remove, * as wildcard",
+                    "placeholder": "hetzner_delete_*"
+                },
+                {
+                    "name": "MCP_AUTH_TOKEN",
+                    "description": "If set, the MCP endpoint requires Authorization: Bearer <token>",
+                    "isSecret": true
+                }
+            ]
+        }
+    ]
+}
