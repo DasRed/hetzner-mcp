@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dasred/hetzner-mcp/compare/v1.0.6...v1.1.0) (2026-11-22)
+
+
+### Features
+
+* deploy to registry.modelcontextprotocol.io ([bc5d504](https://github.com/dasred/hetzner-mcp/commit/bc5d504e8de336c523b45b1b171ab86a56ada18f))
+
 ## [1.0.6](https://github.com/dasred/hetzner-mcp/compare/v1.0.5...v1.0.6) (2026-11-20)
 
 
