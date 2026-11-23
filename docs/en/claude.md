@@ -1,6 +1,6 @@
 ---
 title: Connect to Claude
-description: Connect hetzner-mcp to Claude as a custom connector, in Claude Code or via JSON config in other MCP clients, then test it and fix common problems.
+description: Add hetzner-mcp as a custom connector in Claude (web, desktop, mobile) or as a remote MCP server in Claude Code, test the connection and fix common problems.
 order: 30
 slug: claude
 section: Setup
@@ -34,51 +34,7 @@ claude mcp add --transport http hetzner https://hetzner.mcp.example.com/mcp \
 
 This requires `MCP_AUTH_TOKEN` to be set on the server.
 
-## Other MCP clients (JSON configuration)
-
-Many MCP clients are configured with a JSON entry under `mcpServers`, e.g. the `.mcp.json` of Claude Code or clients with their own web UI. For hetzner-mcp the entry looks like this:
-
-```json
-{
-  "mcpServers": {
-    "hetzner": {
-      "type": "http",
-      "url": "https://hetzner.mcp.example.com/mcp",
-      "headers": {
-        "Authorization": "Bearer your-mcp-auth-token"
-      }
-    }
-  }
-}
-```
-
-- Depending on the client, `type` is `http` or `streamable-http`.
-- Leave out `headers` if `MCP_AUTH_TOKEN` is not set on the server.
-- These clients connect from your machine, so an address in your home network is enough, e.g. `http://192.168.1.10:3000/mcp`.
-
-Clients that only start local servers via stdio (e.g. the `claude_desktop_config.json` of Claude Desktop) connect through [mcp-remote](https://www.npmjs.com/package/mcp-remote):
-
-```json
-{
-  "mcpServers": {
-    "hetzner": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://hetzner.mcp.example.com/mcp",
-        "--header",
-        "Authorization:${AUTH_HEADER}"
-      ],
-      "env": {
-        "AUTH_HEADER": "Bearer your-mcp-auth-token"
-      }
-    }
-  }
-}
-```
-
-The token goes into `env` because some clients do not pass spaces in `args` correctly. For an `http://` address other than `localhost`, mcp-remote also needs `--allow-http`.
+For other MCP clients configured via JSON, see [Other MCP clients](clients.md).
 
 ## Test
 
