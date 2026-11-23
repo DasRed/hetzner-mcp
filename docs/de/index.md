@@ -1,6 +1,6 @@
 ---
 title:       Überblick
-description: hetzner-mcp macht die Hetzner Cloud API als Remote-MCP-Server für Claude nutzbar – standardmäßig nur lesend.
+description: hetzner-mcp macht die Hetzner Cloud API als Remote-MCP-Server für Claude nutzbar, standardmäßig nur lesend. Was er kann, wofür er gedacht ist und der Status.
 order:       0
 section:     Einstieg
 ---

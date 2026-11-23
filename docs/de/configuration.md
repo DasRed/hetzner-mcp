@@ -1,6 +1,6 @@
 ---
 title: Konfiguration
-description: Alle Umgebungsvariablen von hetzner-mcp mit Standardwerten, Tool-Filtern und API-Token.
+description: Alle Umgebungsvariablen von hetzner-mcp mit Standardwerten, dazu wie du einen API-Token für die Hetzner Cloud holst und die Tools per Filter einschränkst.
 order: 20
 slug: konfiguration
 section: Einrichtung

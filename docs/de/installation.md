@@ -1,6 +1,6 @@
 ---
 title:       Installation
-description: hetzner-mcp als Docker-Container starten – per docker run oder Docker Compose.
+description: hetzner-mcp als Docker-Container starten, per docker run oder Docker Compose, mit Ports, Endpunkten, mehreren Projekten und Betrieb hinter einem Reverse Proxy.
 order:       10
 slug:        installation
 section:     Einrichtung

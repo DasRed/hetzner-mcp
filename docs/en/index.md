@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: hetzner-mcp exposes the Hetzner Cloud API as a remote MCP server for Claude – read-only by default.
+description: hetzner-mcp exposes the Hetzner Cloud API as a remote MCP server for Claude, read-only by default. What it can do, what it is meant for and its current status.
 order: 0
 section: Getting started
 ---

@@ -1,6 +1,6 @@
 ---
 title: In Claude einbinden
-description: hetzner-mcp als Custom Connector in Claude oder als Remote-MCP-Server in Claude Code einbinden und testen.
+description: hetzner-mcp als Custom Connector in Claude (Web, Desktop, Mobile) oder als Remote-MCP-Server in Claude Code einbinden, die Verbindung testen und Fehler finden.
 order: 30
 slug: claude
 section: Einrichtung

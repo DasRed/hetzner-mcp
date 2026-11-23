@@ -1,6 +1,6 @@
 ---
 title: Configuration
-description: All environment variables of hetzner-mcp with defaults, tool filters and API token.
+description: All environment variables of hetzner-mcp with their defaults, plus how to get an API token for the Hetzner Cloud and limit the available tools with filters.
 order: 20
 slug: configuration
 section: Setup

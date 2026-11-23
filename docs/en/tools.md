@@ -1,6 +1,6 @@
 ---
 title: Tools
-description: Reference of all 185 hetzner-mcp tools, grouped, with parameters and read-only flag.
+description: Reference of all 185 hetzner-mcp tools for the Hetzner Cloud API, grouped by servers, networking, storage, DNS and more, with parameters and examples.
 order: 40
 slug: tools
 section: Reference

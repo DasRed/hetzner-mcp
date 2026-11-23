@@ -1,6 +1,6 @@
 ---
 title:       Sicherheit
-description: Welche Rechte hetzner-mcp braucht, was der Server darf und wie du den Endpunkt absicherst.
+description: Welche Rechte der API-Token von hetzner-mcp braucht, wann du den schreibenden Modus einschaltest und wie du den MCP-Endpunkt und den Container absicherst.
 order:       50
 slug:        sicherheit
 section:     Referenz

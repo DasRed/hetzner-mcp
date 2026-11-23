@@ -1,6 +1,6 @@
 ---
 title: Security
-description: Which permissions hetzner-mcp needs, what the server may do and how to protect the endpoint.
+description: Which permissions the API token of hetzner-mcp needs, when to turn on write mode and how to protect the MCP endpoint and the container it runs in.
 order: 50
 slug: security
 section: Reference

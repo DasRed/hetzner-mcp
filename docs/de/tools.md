@@ -1,6 +1,6 @@
 ---
 title:       Tools
-description: Referenz aller 185 Tools von hetzner-mcp, nach Gruppen sortiert, mit Parametern und Nur-Lesen-Markierung.
+description: Referenz aller 185 Tools von hetzner-mcp für die Hetzner Cloud API, nach Gruppen wie Server, Netzwerk, Storage und DNS sortiert, mit Parametern und Beispielen.
 order:       40
 slug:        tools
 section:     Referenz

@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Run hetzner-mcp as a Docker container – with docker run or Docker Compose.
+description: Run hetzner-mcp as a Docker container with docker run or Docker Compose, including ports and endpoints, multiple projects and running it behind a reverse proxy.
 order: 10
 slug: installation
 section: Setup
