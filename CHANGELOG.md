@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/dasred/hetzner-mcp/compare/v1.1.1...v1.1.2) (2026-11-24)
+
+### Bug Fixes
+
+* homepage fixed ([ddbfc20](https://github.com/dasred/hetzner-mcp/commit/ddbfc20f9ee9f4bacc0d143fbdf0c64892084d8d))
+
 ## [1.1.1](https://github.com/dasred/hetzner-mcp/compare/v1.1.0...v1.1.1) (2026-11-24)
 
 ### Bug Fixes
