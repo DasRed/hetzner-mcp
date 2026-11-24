@@ -1,3 +1,16 @@
+## [1.1.1](https://github.com/dasred/hetzner-mcp/compare/v1.1.0...v1.1.1) (2026-11-24)
+
+### Bug Fixes
+
+* update github workflows ([0b569ee](https://github.com/dasred/hetzner-mcp/commit/0b569ee0d4e9295253f42b794869cbb1de938f0c))
+
+### Documentation
+
+* fixing description length ([d1a4187](https://github.com/dasred/hetzner-mcp/commit/d1a4187e0ace173f2a69910b1f601487e2b126d3))
+* other MCP clients (JSON configuration) ([48ed6d4](https://github.com/dasred/hetzner-mcp/commit/48ed6d44c44982e07cc84f40dfc46a198b84cfbc))
+* other MCP clients (JSON configuration) ([66bd815](https://github.com/dasred/hetzner-mcp/commit/66bd815611ffb60d220735da53c1ae36ecce2603))
+* other MCP clients (JSON configuration) ([b5b009f](https://github.com/dasred/hetzner-mcp/commit/b5b009fbbec9995a30927de3a633771e13a314b4))
+
 # [1.1.0](https://github.com/dasred/hetzner-mcp/compare/v1.0.6...v1.1.0) (2026-11-22)
 
 
